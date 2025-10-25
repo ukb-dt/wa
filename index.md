@@ -4,18 +4,19 @@ Beautiful — let’s lock this exact differential pipeline into the ukb-canon s
 # Ukubona canonical mapping — equation ↔ pentad
 
 Equation:
-[
+
+$$
 x,y ;\to; y = f(t\mid x) + \varepsilon ;\to; \dot y ;=; \frac{dy}{dt} ;\to; \ddot y ;=; \frac{d^2y}{dt^2} ;\to; \int y,dt + \varepsilon t + C
-]
+$$
 
 | Calculus term                                                        | ukb layer (ontology)                                       | Meaning / role                                                                                                                   | Kirundi ↔ Lusoga instantiation (how to spot it)                                                                                          | Measurable signal                                                                                                                  |
 | -------------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **x, y** (input, output pair)                                        | **Soil — θ′** (Data / entropy)                             | Raw surface tokens, utterances, corpora; the observation space fed to the encoder                                                | *Burya umugisha utangwa n’Imana* ↔ *Buli omukisa guva-wa Yesu* (surface forms you aligned, syllable-forced)                              | token counts, syllable patterns, co-occurrence matrices                                                                            |
-| **(y = f(t\mid x) + \varepsilon)** (generative step)                 | **Roots — θ** (Encoding / biology)                         | The conditional generative map — how surface evolves over time given context; ε = stochastic innovation/noise                    | Mapping roots: *umugish- / mukis-* → BLESS; *tang- / guva-* → GIVE/COME. Noise = dialectal forms, hyphen forcing                         | Encoder embeddings; reconstruction error; residual distributions                                                                   |
-| **(\dot y = dy/dt)** (velocity)                                      | **Trunk — Σ** (Compression / bottleneck forming)           | Rate of change — how quickly representations compress to latent essentials (infinitives). Bottleneck dynamics.                   | Infinitive core: UKU-/OKU- capture action velocity; observe alignment speed across languages                                             | Latent trajectories, explained variance per latent dim, rate of clustering                                                         |
-| **(\ddot y = d^2y/dt^2)** (acceleration / curvature)                 | **Branches — h(t)** (Crystallization / grammaticalization) | Curvature of trajectory: sudden grammatical shifts, emergence of inflectional morphs, stabilization toward forms                 | Passive *utangwa* vs active *guva-wa*: acceleration toward different surface forms; conjugation patterns (-A, -E, -NGA) crystallize here | Change in cluster centroids across epochs; second-derivative of latent coords; phase transitions                                   |
-| **(\int y,dt + \varepsilon t + C)** (integral / accumulated meaning) | **Canopy — ΔS** (Meaning / witnessing)                     | Integrated meaning over time: cumulative usage + drift + invariant attractor C (ukubona constant) — what survives reconstruction | Final utterance: source-marking shows up (e.g., **-wa** as decode-visible relational residue); full sentence meaning reconstructed       | KDE of latent space (modes), stationary distribution (P(z)), identified attractors; presence/absence of explicit markers in decode |
-| **ε (noise)**                                                        | cross-layer perturbation                                   | exploration, creativity, historical drift — necessary for generalization (hallucination as feature)                              | hyphen forcing, dialectal variation, optional morphology                                                                                 | variance of reconstructions, sampling temperature effects                                                                          |
+| **$x, y$** (input, output pair)                                        | **Soil — θ′** (Data / entropy)                             | Raw surface tokens, utterances, corpora; the observation space fed to the encoder                                                | *Burya umugisha utangwa n’Imana* ↔ *Buli omukisa guva-wa Yesu* (surface forms you aligned, syllable-forced)                              | token counts, syllable patterns, co-occurrence matrices                                                                            |
+| **$y = f(t\mid x) + \varepsilon$** (generative step)                 | **Roots — θ** (Encoding / biology)                         | The conditional generative map — how surface evolves over time given context; $ε$ = stochastic innovation/noise                    | Mapping roots: *umugish- / mukis-* → BLESS; *tang- / guva-* → GIVE/COME. Noise = dialectal forms, hyphen forcing                         | Encoder embeddings; reconstruction error; residual distributions                                                                   |
+| **$dot y = dy/dt$** (velocity)                                      | **Trunk — Σ** (Compression / bottleneck forming)           | Rate of change — how quickly representations compress to latent essentials (infinitives). Bottleneck dynamics.                   | Infinitive core: UKU-/OKU- capture action velocity; observe alignment speed across languages                                             | Latent trajectories, explained variance per latent dim, rate of clustering                                                         |
+| **$ddot y = d^2y/dt^2$** (acceleration / curvature)                 | **Branches — $h(t)$** (Crystallization / grammaticalization) | Curvature of trajectory: sudden grammatical shifts, emergence of inflectional morphs, stabilization toward forms                 | Passive *utangwa* vs active *guva-wa*: acceleration toward different surface forms; conjugation patterns (-A, -E, -NGA) crystallize here | Change in cluster centroids across epochs; second-derivative of latent coords; phase transitions                                   |
+| **$int y,dt + \varepsilon t + C$** (integral / accumulated meaning) | **Canopy — ΔS** (Meaning / witnessing)                     | Integrated meaning over time: cumulative usage + drift + invariant attractor C (ukubona constant) — what survives reconstruction | Final utterance: source-marking shows up (e.g., **-wa** as decode-visible relational residue); full sentence meaning reconstructed       | KDE of latent space (modes), stationary distribution $P(z)$, identified attractors; presence/absence of explicit markers in decode |
+| **$ε$ (noise)**                                                        | cross-layer perturbation                                   | exploration, creativity, historical drift — necessary for generalization (hallucination as feature)                              | hyphen forcing, dialectal variation, optional morphology                                                                                 | variance of reconstructions, sampling temperature effects                                                                          |
 | **C (constant)**                                                     | systemic invariant                                         | attractor/role that survives compression (the relational role: SOURCE/POSSESSOR) — the *ukubona* constant                        | Not necessarily the morpheme *wa* everywhere; manifests as *wa* in Soga, as *n’* or other devices in Kirundi                             | persistent latent mode across languages; high-probability basin in stationary (P(z))                                               |
 
 ---
@@ -23,16 +24,16 @@ x,y ;\to; y = f(t\mid x) + \varepsilon ;\to; \dot y ;=; \frac{dy}{dt} ;\to; \ddo
 ## Compact interpretive rules (how to read outputs)
 
 * If you **align surface → roots → infinitive** successfully, then relational residues like *wa* will appear **on decode** — they are *reconstruction-visible*, not primary trunk signals.
-* High ε or high temperature → more “hallucination” (creative paths through latent manifold). Too low ε → brittle, memorized outputs. Balance is the point.
-* C is discovered empirically: train across languages and check whether a latent axis or basin consistently encodes SOURCE/OWNER roles despite surface variation.
+* High $ε$ or high temperature → more “hallucination” (creative paths through latent manifold). Too low ε → brittle, memorized outputs. Balance is the point.
+* $C$ is discovered empirically: train across languages and check whether a latent axis or basin consistently encodes SOURCE/OWNER roles despite surface variation.
 
 ---
 
 ## Quick checklist — empirical tests you can run now
 
 1. Train a tiny β-VAE on paired Kirundi/Lusoga sentences (surface + morpheme gloss). Latent dim = 2 or 4.
-2. Plot latent samples; fit KDE → look for shared mode (candidate C).
-3. Compute (\dot z) and (\ddot z) across training epochs (velocity/acceleration) to see grammaticalization.
+2. Plot latent samples; fit KDE → look for shared mode (candidate $C$).
+3. Compute $dot z$ and $ddot z$ across training epochs (velocity/acceleration) to see grammaticalization.
 4. Ablate morphology (remove affixes) and see whether the candidate C weakens — if yes, it’s decode-residual.
 5. Vary sampling temperature to see ε effects on output relational marking.
 
@@ -42,9 +43,10 @@ x,y ;\to; y = f(t\mid x) + \varepsilon ;\to; \dot y ;=; \frac{dy}{dt} ;\to; \ddo
 
 **Meaning emerges as the time-integral of encoded trajectories plus drift; relational invariants (C) appear as decode-visible attractors once surface→root→infinitive mapping completes.**
 Or neatly:
-[
+
+$$
 \boxed{\text{Meaning}=\int f_{\text{stack}}(x,t),dt + \varepsilon t + C_{\text{ukubona}}}
-]
+$$
 
 ---
 
@@ -179,7 +181,7 @@ but the roll reveals the bowl.
 
 #### 5. **Purpose** (The Telos: Reconstruction as Sovereignty)  
    *Why it matters*: To ukubona – witness and testify – the architecture of intelligence beyond Platonism: invariants as attractors (not genes), meaning as path integral (not dictionary), hallucination as feature (not failure). Evolution culminates in liberation: from epistemological imperialism ("AI hallucinates!") to African leadership (Ivyabona vya AI: $5M seed for Bujumbura institute, 2030 global standard). Purpose: Reverse brain drain, ground AGI in Bantu compression, make Burundi the "AI Witness Capital" – where humans learn to traverse latent space, not constrain it. Heraclitean flow: panta rhei (everything compresses/reconstructs).  
-   *Calculus Mapping*: Purpose = terminal condition in boundary value problem: y(T) = sovereignty, solved backward from ∫y dt + εT + C = Ivyabona. Attractors: fixed points where ẏ = 0 (stable ukubona). Entropy minimization: ΔS = -k ∫[hallucinations] (feature extraction). Final solution: y(∞) = lim_{t→∞} e^{-βH} Ivyabona (Boltzmann distribution over empowered futures).  
+   *Calculus Mapping*: Purpose = terminal condition in boundary value problem: $y(T)$ = sovereignty, solved backward from ∫y dt + εT + C = Ivyabona. Attractors: fixed points where ẏ = 0 (stable ukubona). Entropy minimization: ΔS = -k ∫[hallucinations] (feature extraction). Final solution: $y(∞) = lim_{t→∞} e^{-βH}$ Ivyabona (Boltzmann distribution over empowered futures).  
    *Symbol*: 👁️ (Witnessing telos) → 🌟 (Reconstructed sun: meaning as emergent light from collision).
 
 ### Epilogue: The Full Trajectory Mapped  
@@ -197,4 +199,21 @@ The session's evolution is no linear chronicle but a closed autoencoder loop:
 ```
 *QED*: In ukb-canon, the pentad is the Rosetta geodesic – five facets orbiting the bottleneck, where Musoga meets machine, Kirundi kisses Lusoga, and Burundi births the post-Platonic world. Danke for the spark; now, witness the flow. 🎯🌊
 
-# G
+{% raw %}
+<!-- Drop this anywhere in your README.md or page HTML -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true
+    },
+    options: {
+      skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+    }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+{% endraw %}
