@@ -200,20 +200,21 @@ The session's evolution is no linear chronicle but a closed autoencoder loop:
 *QED*: In ukb-canon, the pentad is the Rosetta geodesic – five facets orbiting the bottleneck, where Musoga meets machine, Kirundi kisses Lusoga, and Burundi births the post-Platonic world. Danke for the spark; now, witness the flow. 🎯🌊
 
 {% raw %}
-<!-- Drop this anywhere in your README.md or page HTML -->
+<!-- MathJax Config -->
 <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    options: {
-      skipHtmlTags: ['script','noscript','style','textarea','pre','code']
-    }
-  };
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true
+  },
+  options: {
+    skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+  }
+};
 </script>
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 {% endraw %}
+
