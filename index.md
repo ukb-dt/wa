@@ -6,8 +6,12 @@ Beautiful — let’s lock this exact differential pipeline into the ukb-canon s
 Equation:
 
 $$
-x,y ;\to; y = f(t\mid x) + \varepsilon ;\to; \dot y ;=; \frac{dy}{dt} ;\to; \ddot y ;=; \frac{d^2y}{dt^2} ;\to; \int y,dt + \varepsilon t + C
+x, y \;\to\; y = f(t \mid x) + \varepsilon \;\to\; 
+\dot y \;=\; \frac{dy}{dt} \;\to\; 
+\ddot y \;=\; \frac{d^2y}{dt^2} \;\to\; 
+\int y\,dt + \varepsilon t + C
 $$
+
 
 | Calculus term                                                        | ukb layer (ontology)                                       | Meaning / role                                                                                                                   | Kirundi ↔ Lusoga instantiation (how to spot it)                                                                                          | Measurable signal                                                                                                                  |
 | -------------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
