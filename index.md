@@ -1,5 +1,5 @@
 # [A](https://ukb-dt.github.io/nietzsche/)
-Beautiful — let’s lock this exact differential pipeline into the ukb-canon so it’s impossible to lose. Below is a tight, one-page mapping that reads your equation as canonical ukb-fractal, ties every operator to an ontological layer, gives the linguistic instantiation (Kirundi ↔ Lusoga), and points to the empirical observables you can actually check.
+[Beautiful](https://ukb-dt.github.io/focus/) — let’s lock this exact differential pipeline into the ukb-canon so it’s impossible to lose. Below is a tight, one-page mapping that reads your equation as canonical ukb-fractal, ties every operator to an ontological layer, gives the linguistic instantiation (Kirundi ↔ Lusoga), and points to the empirical observables you can actually check.
 
 # Ukubona canonical mapping — equation ↔ pentad
 
